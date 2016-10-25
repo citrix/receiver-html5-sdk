@@ -1,0 +1,132 @@
+  /* first assign web font */
+  @font-face {
+    font-family: 'NettoWeb';
+    src: url('../fonts/NettoWeb.woff') format('woff');
+  }
+  /* first assign web font */
+  @font-face {
+    font-family: 'NettoWeb-Bold';
+    src: url('../fonts/NettoWeb-Bold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'fontawesome-webfont';
+    src: url('../fonts/fontawesome-webfont.woff') format('woff');
+  }
+      
+  /* go on with normal style definitions */
+  html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video ,input[type="text"]{
+    font-family: 'NettoWeb', serif ;
+  }
+
+h1, h2, h3, h4, h5, h6{
+     font-family: 'NettoWeb-Bold', serif;
+}
+
+nav.stickynav{
+  background-image: none !important;
+  background: #fff !important
+}
+.wy-nav-content{
+  background: #fff !important;  padding:0px !important;max-width: 1000px
+}
+.wy-body-for-nav {
+    background: left repeat-y #fff;
+    background-size: 300px 1px;
+    background: none !important
+}
+.header-top{
+  background: #000 !important
+}
+.logo-citrix{
+      height: 40px;
+  
+}
+.logo-position{
+    position: relative;
+    top: 15px;
+}
+
+.header-top-right{
+  float: right;padding-top: 10px;padding-right: 70px
+}
+.rst-content .section h1, .rst-content .section h2{
+  padding-top: 10px
+}
+.text-content{
+  line-height: 30px;
+}
+
+.wy-nav-content-wrap {
+    margin-left: 270px;
+    max-width: none;
+    width: 100%;
+    background: #ffffff;
+}
+.wy-nav-shift{
+  top: 80px;padding-top:20px;
+}
+.wy-grid-for-nav{top:90px;}
+.errspan {
+ float: right;
+    margin-right: 0px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+  color:#227be3 !important;cursor: pointer;
+    left: -20px;
+}
+.wy-nav-side {
+    width: 300px;
+}
+.wy-nav-content-wrap {
+    margin-left: 310px;
+    max-width: none;
+    width: 100%;
+    background: #ffffff;
+}
+.searchdocs{
+  border-radius: 5px !important;
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 15px;height: 35px
+}
+.toclink{
+  color: #000 !important
+}
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current a{
+      color: #227be3 !important;
+}
+@media screen and (min-width: 1400px){
+.wy-nav-content {
+    margin: 0;
+    background: #fff;
+}
+}
+@media screen and (max-width: 768px){
+.header-top-left img {
+    height: 25px;
+    width: auto;
+}
+.wy-nav-content-wrap{
+  margin-left: 0px
+}
+
+}
+
+.wy-menu-vertical li.current ul li a {
+   padding: 0 2em;
+   font-size: 15px;
+   line-height: 25px;
+}

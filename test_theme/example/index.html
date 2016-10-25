@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Sample - Citrix AppDNA SDK Reference</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sample";
+    var mkdocs_page_input_path = "example.md";
+    var mkdocs_page_url = "/example/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/nav.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div data-toggle="wy-nav-shift" class="header-top">
+		<div class="header-top-left">
+			<a href="http://www.citrix.com" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+		    <li class="list-inline support">			  
+			<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+			<div class="input-group add-on">
+			<input type="text" name="q" placeholder="Search docs" /><span class="input-group-addon"><a onClick="document.forms['rtd-search-form'].submit();"><i class="fa fa-search"></i></a></span>
+			</div>
+			</form>
+			</li>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+			
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href=".." id="AppDNA SDK Overview" style="font-size:95%;font-weight:bold;">AppDNA SDK Overview</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="">
+        <a class="" href="../html5/" id="HTML5" style="font-size:95%;font-weight:bold;">HTML5</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+            <li><ul class="subnav">
+    <li class="current">
+        <a class="current" href="./" id="Sample" style="font-size:95%;font-weight:bold;">Sample</a>
+    </li>
+    
+    <li class="paddingtop20"></li>
+</ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Citrix AppDNA SDK Reference</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Sample</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/ajitchelat/AppDNA-SDK.git" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="class-session-class-session-page-title"><a class="toclink" href="#class-session-class-session-page-title">Class: Session {#class-session .page-title}</a></h1>
+<h2 id="session"><a class="toclink" href="#session">Session</a></h2>
+<div class="container-overview">
+
+#### <span class="type-signature"></span>new Session<span class="signature">()</span><span class="type-signature"></span> {#Session .name}
+
+
+
+### Members {#members .subsection-title}
+
+#### <span class="type-signature"></span>container<span class="type-signature"></span> {#container .name}
+
+
+
+Contains the type and value of the container where the session is
+launched.
+
+
+##### Properties: {#properties .subsection-title}
+
++-------------------------+-------------------------+-------------------------+
+| Name                    | Type                    | Description             |
++=========================+=========================+=========================+
+| `container`             | <span                   | ###### Properties       |
+|                         | class="param-type">Obje |                         |
+|                         | ct</span>               |   Name      Type        |
+|                         |                         |                         |
+|                         |                         |        Description      |
+|                         |                         |   --------- ----------- |
+|                         |                         | ----------------------- |
+|                         |                         | ------ ---------------- |
+|                         |                         | ----------------------- |
+|                         |                         | ----------------------- |
+|                         |                         | ----------------------- |
+|                         |                         | ----------------------- |
+|                         |                         | ------------            |
+|                         |                         |   `type`    <span class |
+|                         |                         | ="param-type">String</s |
+|                         |                         | pan>   Type of the cont |
+|                         |                         | ainer. Will be set to " |
+|                         |                         | iframe" or "window" whe |
+|                         |                         | n launchType is set to  |
+|                         |                         | "embed" or "newtab" res |
+|                         |                         | pectively.              |
+|                         |                         |   `value`   <span class |
+|                         |                         | ="param-type">Object</s |
+|                         |                         | pan>   Contains the ifr |
+|                         |                         | ame DOM object or refer |
+|                         |                         | ence to the window wher |
+|                         |                         | e the session is launch |
+|                         |                         | ed based on the launchT |
+|                         |                         | ype.                    |
++-------------------------+-------------------------+-------------------------+
+
+#### <span class="type-signature">(readonly) </span>id<span class="type-signature"></span> {#id .name}
+
+##### Properties: {#properties-2 .subsection-title}
+
+  Name   Type                                     Description
+  ------ ---------------------------------------- -------------------
+  `id`   <span class="param-type">String</span>   ID of the object.
+
+### Methods {#methods .subsection-title}
+
+#### <span class="type-signature">(inner) </span>addListener<span class="signature">(eventType, eventListener)</span><span class="type-signature"></span> {#~addListener .name}
+
+<div class="description">
+
+Registers the eventListener on the eventType.
+
+</div>
+
+<h5 id="parameters"><a class="toclink" href="#parameters">Parameters:</a></h5>
+<hr />
+<p>Name              Type                                                                         Description</p>
+<hr />
+<p><code>eventType</code>       <span class="param-type">String</span>                                       Type of the event for which the listener needs to be attached.\
+                                                                                                 \
+                                                                                                 Supported event types :\
+                                                                                                 <a href="../Session.html#~event:onConnection">onConnection</a>\
+                                                                                                 <a href="../Session.html#~event:onConnectionClosed">onConnectionClosed</a>\
+                                                                                                 <a href="../Session.html#~event:onURLRedirection">onURLRedirection</a>\
+                                                                                                 <a href="../Session.html#~event:onError">onError</a>\</p>
+<p><code>eventListener</code>   <span class="param-type"><a href="../global.html#eventListener">eventListener</a></span>   Listener to handle the event.</p>
+<hr />
+<h5 id="example"><a class="toclink" href="#example">Example</a></h5>
+<div class="codehilite"><pre><span class="c1">// Adding onConnection event handler</span>
+<span class="kd">function</span> <span class="nx">connectionHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Event Received : &quot;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>        
+<span class="p">}</span>               
+<span class="nx">sessionObject</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">&quot;onConnection&quot;</span><span class="p">,</span><span class="nx">connectionHandler</span><span class="p">);</span>
+
+<span class="c1">// Adding onConnectionClosed event handler</span>
+<span class="kd">function</span> <span class="nx">connectionClosedHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Event Received : &quot;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>      
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>        
+<span class="p">}</span>
+<span class="nx">sessionObject</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">&quot;onConnectionClosed&quot;</span><span class="p">,</span><span class="nx">connectionClosedHandler</span><span class="p">);</span>
+
+<span class="c1">// Adding onError event handler</span>
+<span class="kd">function</span> <span class="nx">onErrorHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Event Received : &quot;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>      
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">sessionObject</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">&quot;onError&quot;</span><span class="p">,</span><span class="nx">onErrorHandler</span><span class="p">);</span>
+
+<span class="c1">//Adding onURLRedirection event handler</span>
+<span class="kd">function</span> <span class="nx">onURLRedirectionHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Event Received : &quot;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>      
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">sessionObject</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">&quot;onURLRedirection&quot;</span><span class="p">,</span><span class="nx">onURLRedirectionHandler</span><span class="p">);</span>
+</pre></div>
+
+
+<h4 id="inner-changeresolutionbounds-changeresolution-name"><a class="toclink" href="#inner-changeresolutionbounds-changeresolution-name"><span class="type-signature">(inner) </span>changeResolution<span class="signature">(bounds)</span><span class="type-signature"></span> {#~changeResolution .name}</a></h4>
+<div class="description">
+
+Changes the resolution of the session.
+
+</div>
+
+<h5 id="parameters_1"><a class="toclink" href="#parameters_1">Parameters:</a></h5>
+<p>Name       Type                                     Description</p>
+<hr />
+<p><code>bounds</code>   <span class="param-type">Object</span>   Contain session resolution settings.</p>
+<h5 id="properties-properties-3-subsection-title"><a class="toclink" href="#properties-properties-3-subsection-title">Properties: {#properties-3 .subsection-title}</a></h5>
+<p>Name                  Type                                      Description</p>
+<hr />
+<p><code>bounds.autoresize</code>   <span class="param-type">boolean</span>   Should be set to false to give fixed width and height to session. If this value is set to true then the session is resized to match the size of iframe element or the tab.
+  <code>bounds.width</code>        <span class="param-type">Number</span>    Width of the session specified in pixels. This value will be set only when autoresize is set to false.
+  <code>bounds.height</code>       <span class="param-type">Number</span>    Height of the session specified in pixels. This value will be set only when autoresize is set to false.</p>
+<h5 id="examples"><a class="toclink" href="#examples">Examples</a></h5>
+<div class="codehilite"><pre>Example 1 : To change resolution to fixed width and height  
+var bounds = {
+    &quot;autoresize&quot;:false,
+    &quot;width&quot;: &quot;800&quot;,
+    &quot;height&quot;:&quot;600&quot;
+}
+sessionObject.changeResolution(bounds);
+</pre></div>
+
+
+<div class="codehilite"><pre>Example 2 : To change the session resolution to match the iframe element or tab size   
+var bounds = {
+    &quot;autoresize&quot;: true
+}
+sessionObject.changeResolution(bounds);
+</pre></div>
+
+
+<h4 id="inner-disconnect-disconnect-name"><a class="toclink" href="#inner-disconnect-disconnect-name"><span class="type-signature">(inner) </span>disconnect<span class="signature">()</span><span class="type-signature"></span> {#~disconnect .name}</a></h4>
+<div class="description">
+
+Disconnects the session.
+
+</div>
+
+<h4 id="inner-removelistenereventtype-eventlistener-removelistener-name"><a class="toclink" href="#inner-removelistenereventtype-eventlistener-removelistener-name"><span class="type-signature">(inner) </span>removeListener<span class="signature">(eventType, eventListener)</span><span class="type-signature"></span> {#~removeListener .name}</a></h4>
+<div class="description">
+
+Removes the eventListener on the eventType.
+
+</div>
+
+<h5 id="parameters_2"><a class="toclink" href="#parameters_2">Parameters:</a></h5>
+<hr />
+<p>Name              Type                                                                         Description</p>
+<hr />
+<p><code>eventType</code>       <span class="param-type">String</span>                                       Type of the event for which the listener needs to be removed.\
+                                                                                                 \
+                                                                                                 Supported event types :\
+                                                                                                 <a href="../Session.html#~event:onConnection">onConnection</a>\
+                                                                                                 <a href="../Session.html#~event:onConnectionClosed">onConnectionClosed</a>\
+                                                                                                 <a href="../Session.html#~event:onURLRedirection">onURLRedirection</a>\
+                                                                                                 <a href="../Session.html#~event:onError">onError</a>\</p>
+<p><code>eventListener</code>   <span class="param-type"><a href="../global.html#eventListener">eventListener</a></span>   Listener to handle the event.</p>
+<hr />
+<h5 id="example_1"><a class="toclink" href="#example_1">Example</a></h5>
+<div class="codehilite"><pre><span class="c1">//Removing the event handler for onConnection event</span>
+<span class="kd">function</span> <span class="nx">connectionHandler</span><span class="p">(</span><span class="nx">eventObj</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Event Received : &quot;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>      
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">sessionObject</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">&quot;onConnection&quot;</span><span class="p">,</span><span class="nx">connectionHandler</span><span class="p">);</span>
+</pre></div>
+
+
+<h4 id="inner-sendspecialkeyskeys-sendspecialkeys-name"><a class="toclink" href="#inner-sendspecialkeyskeys-sendspecialkeys-name"><span class="type-signature">(inner) </span>sendSpecialKeys<span class="signature">(keys)</span><span class="type-signature"></span> {#~sendSpecialKeys .name}</a></h4>
+<div class="description">
+
+Sends a key combination to the session. In this version only
+"ctrl+alt+del" is supported.
+
+</div>
+
+<h5 id="parameters_3"><a class="toclink" href="#parameters_3">Parameters:</a></h5>
+<p>Name     Type                                     Description</p>
+<hr />
+<p><code>keys</code>   <span class="param-type">String</span>   Key combination string.</p>
+<h5 id="example_2"><a class="toclink" href="#example_2">Example</a></h5>
+<div class="codehilite"><pre>var keys = &quot;ctrl+alt+del&quot;; //Only this key combination is supported in this version.
+sessionObject.sendSpecialKeys(keys);
+</pre></div>
+
+
+<h4 id="inner-startlaunchdata-start-name"><a class="toclink" href="#inner-startlaunchdata-start-name"><span class="type-signature">(inner) </span>start<span class="signature">(launchData)</span><span class="type-signature"></span> {#~start .name}</a></h4>
+<div class="description">
+
+Starts the session.
+
+</div>
+
+<h5 id="parameters_4"><a class="toclink" href="#parameters_4">Parameters:</a></h5>
+<p>Name           Type                                     Description</p>
+<hr />
+<p><code>launchData</code>   <span class="param-type">Object</span>   Contains the type and value of ICA.</p>
+<h5 id="properties-properties-4-subsection-title"><a class="toclink" href="#properties-properties-4-subsection-title">Properties: {#properties-4 .subsection-title}</a></h5>
+<p>Name                 Type                                     Description</p>
+<hr />
+<p><code>launchData.type</code>    <span class="param-type">String</span>   Specifies the data type of ICA data. Allowed values are "json" or "ini".
+  <code>launchData.value</code>   <span class="param-type">String</span>   ICA data to start the session. It should be a JSON object when type is "json" or a string read from a .ini file when type is "ini".</p>
+<h5 id="examples_1"><a class="toclink" href="#examples_1">Examples</a></h5>
+<div class="codehilite"><pre>Example 1 : When ICA data is in JSON format                                
+var icaObj = {
+    &quot;ClientName&quot;:&quot;HTML5-Receiver&quot;,
+    &quot;Domain&quot;:&quot;&lt;domain_name&gt;&quot;,
+    &quot;ClearPassword&quot;:&quot;&lt;password&gt;&quot;,
+    &quot;InitialProgram&quot;:&quot;&lt;initial program&quot;,
+    &quot;Title&quot;:&quot;&lt;title&gt;&quot;,
+    &quot;Address&quot;:&quot;&lt;ip address&gt;&quot;,
+    &quot;Username&quot;:&quot;&lt;user name&gt;&quot;,
+    &quot;wsPort&quot;:&quot;&lt;port val&gt;&quot;
+}
+var launchData = {&quot;type&quot; : &quot;json&quot;,value : icaObj};
+sessionObject.start(launchData);
+</pre></div>
+
+
+<div class="codehilite"><pre>Example 2 : When ICA data is in INI format
+var launchData = {&quot;type&quot; :&quot;ini&quot;,value :&quot;&lt;ica data in ini format&gt;&quot;};
+sessionObject.start(launchData);
+</pre></div>
+
+
+<h3 id="events-events-subsection-title"><a class="toclink" href="#events-events-subsection-title">Events {#events .subsection-title}</a></h3>
+<h4 id="onconnection-eventonconnection-name"><a class="toclink" href="#onconnection-eventonconnection-name">onConnection {#~event:onConnection .name}</a></h4>
+<div class="description">
+
+To receive various states during the connection from client to server.
+
+</div>
+
+<h5 id="type"><a class="toclink" href="#type">Type:</a></h5>
+<ul>
+<li><span class="param-type">object</span></li>
+</ul>
+<h5 id="properties-properties-5-subsection-title"><a class="toclink" href="#properties-properties-5-subsection-title">Properties: {#properties-5 .subsection-title}</a></h5>
+<hr />
+<p>Name      Type                                     Description</p>
+<hr />
+<p><code>state</code>   <span class="param-type">String</span>   Different connection states below :\
+                                                     "connecting" : Raised when connection starts before displaying connection dialog.\
+                                                     "connected" : Raised when connection is complete and when server and client starts exchanging data.\
+                                                     "sessionReady" : Raised when session is fully initialized, launched and ready for user interaction.\</p>
+<hr />
+<h5 id="example_3"><a class="toclink" href="#example_3">Example</a></h5>
+<div class="codehilite"><pre>Sample event object generated for onConnection event.    
+
+{   
+    &quot;id&quot;:&quot;&lt;session id&gt;&quot;,
+    &quot;type&quot; : &quot;onConnection&quot;,
+    &quot;data&quot;:{
+        &quot;state&quot; : &quot;connecting&quot; // Event is triggered 3 times with different states mentioned above.
+    }
+}
+</pre></div>
+
+
+<h4 id="onconnectionclosed-eventonconnectionclosed-name"><a class="toclink" href="#onconnectionclosed-eventonconnectionclosed-name">onConnectionClosed {#~event:onConnectionClosed .name}</a></h4>
+<div class="description">
+
+Raised when the connection with the server is closed.
+
+</div>
+
+<h5 id="example_4"><a class="toclink" href="#example_4">Example</a></h5>
+<div class="codehilite"><pre>Sample event object generated for onConnectionClosed event.              
+
+{   
+    &quot;id&quot;:&quot;&lt;session id&gt;&quot;,
+    &quot;type&quot; : &quot;onConnectionClosed&quot;,
+}
+</pre></div>
+
+
+<h4 id="onerror-eventonerror-name"><a class="toclink" href="#onerror-eventonerror-name">onError {#~event:onError .name}</a></h4>
+<div class="description">
+
+Raised on occurrence of any error in Citrix Receiver.
+
+</div>
+
+<h5 id="type_1"><a class="toclink" href="#type_1">Type:</a></h5>
+<ul>
+<li><span class="param-type">object</span></li>
+</ul>
+<h5 id="properties-properties-6-subsection-title"><a class="toclink" href="#properties-properties-6-subsection-title">Properties: {#properties-6 .subsection-title}</a></h5>
+<p>Name        Type                                     Description</p>
+<hr />
+<p><code>id</code>        <span class="param-type">String</span>   String ID defined in &lt;locale_file&gt;.js. For example, en.js would be for English, ko.js for Korean etc., ID remains the same for all locales supported.
+  <code>message</code>   <span class="param-type">String</span>   Localized error message for the key. Customer can provide custom string in the language file to get meaningful error in the context of the deployment.</p>
+<h5 id="example_5"><a class="toclink" href="#example_5">Example</a></h5>
+<div class="codehilite"><pre>Sample event object generated for onError event.             
+
+{   
+    &quot;id&quot;:&quot;&lt;session id&gt;&quot;,
+    &quot;type&quot; : &quot;onError&quot;,
+    &quot;data&quot;:{
+            &quot;id&quot;:&quot;&lt;key_in_locale_file&gt;&quot; 
+            &quot;message&quot; : &quot;&lt;value_for_the_key_in_locale_file&gt;&quot;
+        }
+}                           
+</pre></div>
+
+
+<h4 id="onurlredirection-eventonurlredirection-name"><a class="toclink" href="#onurlredirection-eventonurlredirection-name">onURLRedirection {#~event:onURLRedirection .name}</a></h4>
+<div class="description">
+
+Raised when URL redirection is configured on server and when any URL is
+passed to the HTML5 engine to process. The message would contain the URL
+that is redirected to the client.
+
+</div>
+
+<h5 id="type_2"><a class="toclink" href="#type_2">Type:</a></h5>
+<ul>
+<li><span class="param-type">object</span></li>
+</ul>
+<h5 id="properties-properties-7-subsection-title"><a class="toclink" href="#properties-properties-7-subsection-title">Properties: {#properties-7 .subsection-title}</a></h5>
+<p>Name    Type                                     Description</p>
+<hr />
+<p><code>url</code>   <span class="param-type">String</span>   The value of the url would contain the URL that is redirected to the client.</p>
+<h5 id="example_6"><a class="toclink" href="#example_6">Example</a></h5>
+<div class="codehilite"><pre>Sample event object generated for onURLRedirection event.        
+
+{   
+    &quot;id&quot;:&quot;&lt;session id&gt;&quot;,
+    &quot;type&quot; : &quot;onURLRedirection&quot;,
+    &quot;data&quot;:{
+        &quot;url&quot; : &quot;&lt;url_received_to_redirect&gt;&quot;
+    }
+}               
+</pre></div>
+
+
+</div>
+
+</div>
+
+<h2 id="home"><a class="toclink" href="#home"><a href="../index.html">Home</a></a></h2>
+<h3 id="classes"><a class="toclink" href="#classes">Classes</a></h3>
+<ul>
+<li><a href="../ReceiverError.html">ReceiverError</a></li>
+<li><a href="../Session.html">Session</a></li>
+</ul>
+<h3 id="events"><a class="toclink" href="#events">Events</a></h3>
+<ul>
+<li><a href="../Session.html#~event:onConnection">onConnection</a></li>
+<li><a href="../Session.html#~event:onConnectionClosed">onConnectionClosed</a></li>
+<li><a href="../Session.html#~event:onError">onError</a></li>
+<li><a href="../Session.html#~event:onURLRedirection">onURLRedirection</a></li>
+</ul>
+<h3 id="namespaces"><a class="toclink" href="#namespaces">Namespaces</a></h3>
+<ul>
+<li><a href="../citrix.receiver.html">receiver</a></li>
+</ul>
+<h3 id="global"><a class="toclink" href="#global"><a href="../global.html">Global</a></a></h3>
+<p>\</p>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/ajitchelat/AppDNA-SDK.git" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span class="prev"><a href="../html5/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
