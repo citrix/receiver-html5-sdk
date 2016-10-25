@@ -14,5 +14,5 @@ Citrix Receiver for HTML5 enhances support for HDX and SDK sessions by enabling 
 5.  Attach the events if required.
 6.  Start the session by passing ICA. You can refer to [StoreFront Web APIs](https://www.citrix.com/downloads/storefront-web-interface/sdks/storefront-services-api-30.html) to fetch ICA.
 
-Click [here](./citrix.receiver) to access the full API documentation.
+Click [here](./citrix-receiver) to access the full API documentation.
 
