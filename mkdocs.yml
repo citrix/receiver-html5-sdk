@@ -1,7 +1,6 @@
-
 site_name: Citrix HTML5 Receiver SDK
 site_description: Reference guide for Citrix HTML5 Receiver SDK
-theme_dir: theme
+theme_dir: theme_multi
 markdown_extensions:
   - admonition
   - codehilite
@@ -9,8 +8,13 @@ markdown_extensions:
      anchorlink: True
 
 pages:
-- Citrix Recevier for HTML5 SDK: index.md
-- Receiver: citrix-receiver.md
-- Global: global.md
-- ReceiverError: ReceiverError.md
-- Session: session.md
+- HDX SDK for HTML5: index.md
+- SDK Capabilities: capabilities.md
+- API Reference:
+  - Class:
+    - ReceiverError: ReceiverError.md
+    - Session: session.md
+  - Namespaces: 
+    - Receiver: citrix-receiver.md
+  - Global: global.md
+- SDK Sample: sample.md
