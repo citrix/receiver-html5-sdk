@@ -4,7 +4,7 @@ Refer the end-to-end example in the download. This [link](https://www.citrix.com
 
 ## Steps to run the SDK sample page:
 
-- Copy all 3 files from `CitrixReceiverHTML5SDK_2.2.zip` to Receiver for Web root folder
-- Copy SDKExample.html from `CitrixReceiverHTML5SDK_2.2_Example.zip` to the Receiver for Web root folder
+- Copy all 3 files from `CitrixReceiverHTML5SDK.zip` to Receiver for Web root folder
+- Copy SDKExample.html from `CitrixReceiverHTML5SDK_Example.zip` to the Receiver for Web root folder
 - Open the StoreFront admin console, select the Authentication node and click "Add/Remove Methods". Enable "HTTP Basic"
 - Navigate to the SDKExample.html in a Web browser
