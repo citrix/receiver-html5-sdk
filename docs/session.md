@@ -68,17 +68,13 @@ sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
 Adds the custom buttons to the in-session toolbar.
 ### Parameters:
 
-### Name	Type	Description
-customToolbarData	Array.<Object>	Array of objects containing the custom toolbar buttons to be added where each object contains more details of the button to be added.
-
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contain session resolution settings.</td></tr></tbody></table>
 ### Note: Toolbar should be enabled to use this method.
 
 ### Properties
 
-### Name	Type	Description
-id	String	id of the button
-config.isPrimary	boolean	Value set to true specifies that the button to be added to primary toolbar buttons.
-Setting to false would add to secondary menu (present under more button). 
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds.autoresize</code></td><td class="type"> <span class="param-type">boolean</span> </td><td class="description last">Should be set to false to give fixed width and height to session. If this value is set to true then the session is resized to match the size of iframe element or the tab.</td></tr><tr> <td class="name"><code>bounds.width</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Width of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr><tr> <td class="name"><code>bounds.height</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Height of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr></tbody></table>
+ 
 
 Defaults to true.
 config.imageUrl	String	Image url of the button. Mandatory when the button is added to primary toolbar button.
