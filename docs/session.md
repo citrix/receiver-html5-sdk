@@ -11,19 +11,13 @@
 Contains the type and value of the container where the session is launched.
 ### Properties:
 
-### Name	Type	Description
-container	Object	
-Properties
-
-###Name	Type	Description
-type	String	Type of the container. Will be set to "iframe" or "window" when launchType is set to "embed" or "newtab" respectively.
-value	Object	Contains the iframe DOM object or reference to the window where the session is launched based on the launchType.
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>container</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last"> <h6>Properties</h6><table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>type</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Type of the container. Will be set to "iframe" or "window" when launchType is set to "embed" or "newtab" respectively.</td></tr><tr> <td class="name"><code>value</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contains the iframe DOM object or reference to the window where the session is launched based on the launchType.</td></tr></tbody></table> </td></tr></tbody></table>
 ### (readonly) id
 
 ### Properties:
 
-### Name	Type	Description
-id	String	ID of the object.
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>id</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">ID of the object.</td></tr></tbody></table>
+
 ### Methods
 
 ### (inner) addListener(eventType, eventListener)
@@ -32,8 +26,7 @@ Registers the eventListener on the eventType.
 ###Parameters:
 
 
-### Name	Type	Description
-eventType	String	Type of the event for which the listener needs to be attached.
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>eventType</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Type of the event for which the listener needs to be attached.<br><br>Supported event types : <br><a href="/Session#~event:onConnection">onConnection</a><br><a href="/Session#~event:onConnectionClosed">onConnectionClosed</a><br><a href="/Session#~event:onURLRedirection">onURLRedirection</a><br><a href="/Session#~event:onError">onError</a><br></td></tr><tr> <td class="name"><code>eventListener</code></td><td class="type"> <span class="param-type"><a href="/global#eventListener">eventListener</a></span> </td><td class="description last">Listener to handle the event.</td></tr></tbody></table>
 
 Supported event types : 
 onConnection
@@ -157,14 +150,10 @@ sessionObject.addToolbarBtns(customToolbarData);
 Changes the resolution of the session.
 ### Parameters:
 
-### Name	Type	Description
-bounds	Object	Contain session resolution settings.
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contain session resolution settings.</td></tr></tbody></table>
 ### Properties:
 
-### Name	Type	Description
-bounds.autoresize	boolean	Should be set to false to give fixed width and height to session. If this value is set to true then the session is resized to match the size of iframe element or the tab.
-bounds.width	Number	Width of the session specified in pixels. This value will be set only when autoresize is set to false.
-bounds.height	Number	Height of the session specified in pixels. This value will be set only when autoresize is set to false.
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds.autoresize</code></td><td class="type"> <span class="param-type">boolean</span> </td><td class="description last">Should be set to false to give fixed width and height to session. If this value is set to true then the session is resized to match the size of iframe element or the tab.</td></tr><tr> <td class="name"><code>bounds.width</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Width of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr><tr> <td class="name"><code>bounds.height</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Height of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr></tbody></table>
 Examples
 
 Example 1 : To change resolution to fixed width and height  
@@ -190,8 +179,7 @@ Sends logoff to the session.
 Removes the eventListener on the eventType.
 ### Parameters:
 
-### Name	Type	Description
-eventType	String	Type of the event for which the listener needs to be removed.
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>eventType</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Type of the event for which the listener needs to be removed.<br><br>Supported event types : <br><a href="/Session#~event:onConnection">onConnection</a><br><a href="/Session#~event:onConnectionClosed">onConnectionClosed</a><br><a href="/Session#~event:onURLRedirection">onURLRedirection</a><br><a href="/Session#~event:onError">onError</a><br></td></tr><tr> <td class="name"><code>eventListener</code></td><td class="type"> <span class="param-type"><a href="/global#eventListener">eventListener</a></span> </td><td class="description last">Listener to handle the event.</td></tr></tbody></table>
 
 Supported event types : 
 onConnection
@@ -228,9 +216,7 @@ sessionObject.removeToolbarBtns(["back","forward"]);
 Sends a key combination to the session.
 ### Parameters:
 
-### Name	Type	Description
-keys	Array	Array of strings with each one representing a key.
-Supported keys Alt, Control, Shift, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Home, End, PageUp, PageDown, Backspace, Delete, F5, PrintScreen,Insert, Escape, Tab.
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>keys</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Key combination string.</td></tr></tbody></table>
 
 Till 1.1 version only "ctrl+alt+del" was supported. From 1.2 version, more key combinations can be sent to session.
 ### Example
@@ -249,13 +235,10 @@ sessionObject.sendSpecialKeys(keys);
 Starts the session.
 ### Parameters:
 
-Name	Type	Description
-launchData	Object	Contains the type and value of ICA.
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>launchData</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contains the type and value of ICA.</td></tr></tbody></table>
 ### Properties:
 
-### Name	# Type	# Description
-launchData.type	String	Specifies the data type of ICA data. Allowed values are "json" or "ini".
-launchData.value	String	ICA data to start the session. It should be a JSON object when type is "json" or a string read from a .ini file when type is "ini".
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>launchData.type</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Specifies the data type of ICA data. Allowed values are "json" or "ini".</td></tr><tr> <td class="name"><code>launchData.value</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">ICA data to start the session. It should be a JSON object when type is "json" or a string read from a .ini file when type is "ini".</td></tr></tbody></table>
 ### Examples
 
 Example 1 : When ICA data is in JSON format                                
@@ -284,11 +267,7 @@ Type:
 object
 ### Properties:
 
-### Name	Type	Description
-state	String	Different connection states below : 
-"connecting" : Raised when connection starts before displaying connection dialog. 
-"connected" : Raised when connection is complete and when server and client starts exchanging data. 
-"sessionReady" : Raised when session is fully initialized, launched and ready for user interaction. 
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>state</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Different connection states below : <br>"connecting" : Raised when connection starts before displaying connection dialog. <br>"connected" : Raised when connection is complete and when server and client starts exchanging data. <br>"sessionReady" : Raised when session is fully initialized, launched and ready for user interaction. <br></td></tr></tbody></table>
 ### Example
 
 Sample event object generated for onConnection event.	
@@ -319,9 +298,7 @@ Type:
 object
 ### Properties:
 
-### Name	Type	Description
-id	String	String ID defined in <locale_file>.js. For example, en.js would be for English, ko.js for Korean etc., ID remains the same for all locales supported.
-message	String	Localized error message for the key. Customer can provide custom string in the language file to get meaningful error in the context of the deployment.
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>id</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">String ID defined in &lt;locale_file&gt;.js. For example, en.js would be for English, ko.js for Korean etc., ID remains the same for all locales supported.</td></tr><tr> <td class="name"><code>message</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Localized error message for the key. Customer can provide custom string in the language file to get meaningful error in the context of the deployment.</td></tr></tbody></table>
 ### Example
 
 Sample event object generated for onError event.				
@@ -356,8 +333,7 @@ Type:
 object
 ### Properties:
 
-### Name	Type	Description
-url	String	The value of the url would contain the URL that is redirected to the client.
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>url</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">The value of the url would contain the URL that is redirected to the client.</td></tr></tbody></table>
 ### Example
 
 Sample event object generated for onURLRedirection event.		
