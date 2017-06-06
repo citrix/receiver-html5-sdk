@@ -36,6 +36,7 @@ onError
 eventListener	eventListener	Listener to handle the event.
 ### Example
 
+```
 // Adding onConnection event handler
 function connectionHandler(event){
 	console.log("Event Received : " + event.type);
@@ -63,6 +64,8 @@ function onURLRedirectionHandler(event){
 	console.log(event.data);
 }
 sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
+```
+
 ### (inner) addToolbarBtns(customToolbarData)
 
 Adds the custom buttons to the in-session toolbar.
@@ -99,6 +102,7 @@ handler	eventListener	Event listener that listens for the click of the custom to
 
 Example 1 :  Adding help custom button to primary toolbar and position is set to rear(added before more button)
 
+```
 function helpButtonHandler(eventObj){
 	console.log("Event Received : " + event.type);		
 	console.log(event.data);
@@ -106,9 +110,11 @@ function helpButtonHandler(eventObj){
 
 var customToolbarData = [{"id" :"help","config":{"position":"rear","imageUrl":"http://<path_of_the_image>/help.png","toolTip":"Help"},"handler":helpButtonHandler}];
 sessionObject.addToolbarBtns(customToolbarData);
+```
 
 Example 2 :  Adding back and forward buttons that allows navigation of the webpage in browser and position is set to front (added after receiver button). 
 
+```
 function backButtonHandler(eventObj){
 	console.log("Event Received : " + event.type);		
 	console.log(event.data);
@@ -125,9 +131,11 @@ customToolbarData.push({"id" :"back","config":{"position":"front","imageUrl":"ht
 customToolbarData.push({"id" :"forward","config":{"position":"front","imageUrl":"http://<path_of_the_image>/fwd.png","toolTip": "Forward"},"handler":forwardButtonHandler});
 
 sessionObject.addToolbarBtns(customToolbarData);<br/><br/><br/>
+```
 
 Example 3 :  Adding help custom button as primary toolbar with position set to rear and contact us button as secondary button.
 
+```
 function helpButtonHandler(eventObj){
 	console.log("Event Received : " + event.type);		
 	console.log(event.data);
@@ -141,6 +149,8 @@ customToolbarData.push({"id" :"help","config":{"position":"rear","imageUrl":"htt
 customToolbarData.push({"id" :"contactUs","config":{"toolTip":"Help","isPrimary":false},"handler":contactUsButtonHandler});
 
 sessionObject.addToolbarBtns(customToolbarData);
+```
+
 ### (inner) changeResolution(bounds)
 
 Changes the resolution of the session.
@@ -153,17 +163,24 @@ Changes the resolution of the session.
 Examples
 
 Example 1 : To change resolution to fixed width and height  
+```
 var bounds = {
 	"autoresize":false,
 	"width": "800",
 	"height":"600"
 }
 sessionObject.changeResolution(bounds);
+```
+
 Example 2 : To change the session resolution to match the iframe element or tab size   
+
+```
 var bounds = {
 	"autoresize": true
 }
 sessionObject.changeResolution(bounds);
+```
+
 ### (inner) disconnect()
 
 Disconnects the session.
@@ -184,13 +201,14 @@ onURLRedirection
 onError
 eventListener	eventListener	Listener to handle the event.
 ### Example
-
+```
 //Removing the event handler for onConnection event
 function connectionHandler(eventObj){
 	console.log("Event Received : " + event.type);		
 	console.log(event.data);
 }
 sessionObject.removeListener("onConnection",connectionHandler);
+```
 ### (inner) removeToolbarBtns(toolbarButtonIds)
 
 Removes the custom toolbar buttons added to in-session toolbar.
@@ -201,12 +219,13 @@ toolbarButtonIds	Array.<String>	Array of custom toolbar button ids to be removed
 Example
 
 Example 1 : Removing the help button added using addToolbarBtns example.
-
+```
 sessionObject.removeToolbarBtns(["help"]);
-
+```
 Example 2 : Removing multiple buttons say back and forward buttons added using addToolbarBtns example.
-
+```
 sessionObject.removeToolbarBtns(["back","forward"]);
+```
 ### (inner) sendSpecialKeys(keys)
 
 Sends a key combination to the session.
@@ -218,13 +237,16 @@ Till 1.1 version only "ctrl+alt+del" was supported. From 1.2 version, more key c
 ### Example
 
 Example 1 : Sends Ctrl+alt+delete to the session.
-
+```
 var keys = ["Control","Alt","Delete"];
 sessionObject.sendSpecialKeys(keys);
+```
 
 Example 2 : To preview different apps running inside session, Ctrl+alt+tab can be sent.
+```
 var keys = ["Control","Alt","Tab"];
-sessionObject.sendSpecialKeys(keys);				
+sessionObject.sendSpecialKeys(keys);
+```
 				
 ### (inner) start(launchData)
 
@@ -238,6 +260,7 @@ Starts the session.
 ### Examples
 
 Example 1 : When ICA data is in JSON format                                
+```
 var icaObj = {
 	"ClientName":"HTML5-Receiver",
 	"Domain":"<domain_name>",
@@ -253,6 +276,7 @@ sessionObject.start(launchData);
 Example 2 : When ICA data is in INI format
 var launchData = {"type" :"ini",value :"<ica data in ini format>"};
 sessionObject.start(launchData);
+```
 Events
 
 onConnection
@@ -267,7 +291,7 @@ object
 ### Example
 
 Sample event object generated for onConnection event.	
-				
+```				
 {	
 	"id":"<session id>",
 	"type" : "onConnection",
@@ -275,17 +299,19 @@ Sample event object generated for onConnection event.
 		"state" : "connecting" // Event is triggered 3 times with different states mentioned above.
 	}
 }
+```
 onConnectionClosed
 
 Raised when the connection with the server is closed.
 ### Example
 
 Sample event object generated for onConnectionClosed event.				
-
+```
 {	
 	"id":"<session id>",
 	"type" : "onConnectionClosed",
 }
+```
 onError
 
 Raised on occurrence of any error in Citrix Receiver.
@@ -298,7 +324,7 @@ object
 ### Example
 
 Sample event object generated for onError event.				
-
+```
 {	
 	"id":"<session id>",
 	"type" : "onError",
@@ -308,12 +334,12 @@ Sample event object generated for onError event.
 		}
 }							
 onToolbarBtnClick_btn_id
-
+```
 Raised when the custom toolbar button with id equal to btn_id is clicked.
 ### Example
 
 Sample event object generated for onConnectionClosed event.				
-
+```
 {	
 	"id":"<session id>",
 	"type" : "onToolbarBtnClick_btn_id",
@@ -321,6 +347,7 @@ Sample event object generated for onConnectionClosed event.
 			"id" : <btn_id>
 	}
 }
+```
 onURLRedirection
 
 Raised when URL redirection is configured on server and when any URL is passed to the HTML5 engine to process. The message would contain the URL that is redirected to the client.
@@ -333,28 +360,12 @@ object
 ### Example
 
 Sample event object generated for onURLRedirection event.		
-								
+```								
 {	
 	"id":"<session id>",
 	"type" : "onURLRedirection",
 	"data":{
 		"url" : "<url_received_to_redirect>"
 	}
-}				
-Home
-
-Classes
-
-ReceiverError
-Session
-Events
-
-onConnection
-onConnectionClosed
-onError
-onToolbarBtnClick_btn_id
-onURLRedirection
-Namespaces
-
-receiver
-Global
+}
+```
