@@ -35,6 +35,10 @@ onURLRedirection
 onError
 eventListener	eventListener	Listener to handle the event.
 ### Example
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 ```
 // Adding onConnection event handler
 function connectionHandler(event){
@@ -66,6 +70,11 @@ sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
 ```
 ### (inner) addToolbarBtns(customToolbarData)
 
+<<<<<<< HEAD
+=======
+### (inner) addToolbarBtns(customToolbarData)
+
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 Adds the custom buttons to the in-session toolbar.
 ### Parameters:
 
@@ -80,7 +89,11 @@ Adds the custom buttons to the in-session toolbar.
 Defaults to true.
 config.imageUrl	String	Image url of the button. Mandatory when the button is added to primary toolbar button.
 
+<<<<<<< HEAD
 #### Note:
+=======
+### Note:
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 Recommendation is to host the images where SDK files are hosted and give full path of the image. 
 Other option is to use the data URL of the image.
 
@@ -89,6 +102,7 @@ config.position	String	Specifies the position of the custom button when added as
 
 1) Setting to 'front' would add the button to the front of the toolbar (immediately after receiver button).
 2) Setting to 'rear' would add the button before more button.
+<<<<<<< HEAD
 
 #### Note : For secondary custom buttons it would be appended to the menu shown on clicking more button.
 
@@ -152,11 +166,85 @@ Changes the resolution of the session.
 <table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contain session resolution settings.</td></tr></tbody></table>
 ### Properties:
 
+=======
+
+### Note : For secondary custom buttons it would be appended to the menu shown on clicking more button.
+
+Defaults to 'front' when unspecified.
+config.toolTip	String	Value is set as tooltip if the custom button is primary. 
+For secondary the value is shown as the menu item.
+handler	eventListener	Event listener that listens for the click of the custom toolbar button.
+### Example
+
+Example 1 :  Adding help custom button to primary toolbar and position is set to rear(added before more button)
+
+```
+function helpButtonHandler(eventObj){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+}
+
+var customToolbarData = [{"id" :"help","config":{"position":"rear","imageUrl":"http://<path_of_the_image>/help.png","toolTip":"Help"},"handler":helpButtonHandler}];
+sessionObject.addToolbarBtns(customToolbarData);
+```
+
+Example 2 :  Adding back and forward buttons that allows navigation of the webpage in browser and position is set to front (added after receiver button). 
+
+```
+function backButtonHandler(eventObj){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+	sessionObject.sendSpecialKeys(["ALT_KEY","LEFT_ARROW"]);
+}
+function forwardButtonHandler(eventObj){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+	sessionObject.sendSpecialKeys(["ALT_KEY","RIGHT_ARROW"]);
+}
+
+var customToolbarData = [];
+customToolbarData.push({"id" :"back","config":{"position":"front","imageUrl":"http://<path_of_the_image>/back.png","toolTip":"Back"},"handler":backButtonHandler});
+customToolbarData.push({"id" :"forward","config":{"position":"front","imageUrl":"http://<path_of_the_image>/fwd.png","toolTip": "Forward"},"handler":forwardButtonHandler});
+
+sessionObject.addToolbarBtns(customToolbarData);<br/><br/><br/>
+```
+
+Example 3 :  Adding help custom button as primary toolbar with position set to rear and contact us button as secondary button.
+
+```
+function helpButtonHandler(eventObj){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+}
+function contactUsButtonHandler(eventObj){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+}
+var customToolbarData = [];
+customToolbarData.push({"id" :"help","config":{"position":"rear","imageUrl":"http://<path_of_the_image>/help.png","toolTip":"Help"},"handler":helpButtonHandler});
+customToolbarData.push({"id" :"contactUs","config":{"toolTip":"Help","isPrimary":false},"handler":contactUsButtonHandler});
+
+sessionObject.addToolbarBtns(customToolbarData);
+```
+
+### (inner) changeResolution(bounds)
+
+Changes the resolution of the session.
+### Parameters:
+
+<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Contain session resolution settings.</td></tr></tbody></table>
+### Properties:
+
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 <table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>bounds.autoresize</code></td><td class="type"> <span class="param-type">boolean</span> </td><td class="description last">Should be set to false to give fixed width and height to session. If this value is set to true then the session is resized to match the size of iframe element or the tab.</td></tr><tr> <td class="name"><code>bounds.width</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Width of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr><tr> <td class="name"><code>bounds.height</code></td><td class="type"> <span class="param-type">Number</span> </td><td class="description last">Height of the session specified in pixels. This value will be set only when autoresize is set to false.</td></tr></tbody></table>
 Examples
 
 Example 1 : To change resolution to fixed width and height  
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 var bounds = {
 	"autoresize":false,
 	"width": "800",
@@ -164,13 +252,24 @@ var bounds = {
 }
 sessionObject.changeResolution(bounds);
 ```
+<<<<<<< HEAD
 Example 2 : To change the session resolution to match the iframe element or tab size   
 ```
+=======
+
+Example 2 : To change the session resolution to match the iframe element or tab size   
+
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 var bounds = {
 	"autoresize": true
 }
 sessionObject.changeResolution(bounds);
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 ### (inner) disconnect()
 
 Disconnects the session.
@@ -200,6 +299,7 @@ function connectionHandler(eventObj){
 sessionObject.removeListener("onConnection",connectionHandler);
 ```
 ### (inner) removeToolbarBtns(toolbarButtonIds)
+<<<<<<< HEAD
 
 Removes the custom toolbar buttons added to in-session toolbar.
 ### Parameters:
@@ -208,13 +308,27 @@ Removes the custom toolbar buttons added to in-session toolbar.
 toolbarButtonIds	Array.<String>	Array of custom toolbar button ids to be removed.
 Example
 
+=======
+
+Removes the custom toolbar buttons added to in-session toolbar.
+### Parameters:
+
+### Name	Type	Description
+toolbarButtonIds	Array.<String>	Array of custom toolbar button ids to be removed.
+Example
+
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 Example 1 : Removing the help button added using addToolbarBtns example.
 ```
 sessionObject.removeToolbarBtns(["help"]);
 ```
 Example 2 : Removing multiple buttons say back and forward buttons added using addToolbarBtns example.
 ```
+<<<<<<< HEAD
 sessionObject.removeToolbarBtns(["back","forward"]);
+=======
+sessionObject.removeToolbarBtns(["back","forward"]);
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 ```
 ### (inner) sendSpecialKeys(keys)
 
@@ -231,11 +345,20 @@ Example 1 : Sends Ctrl+alt+delete to the session.
 var keys = ["Control","Alt","Delete"];
 sessionObject.sendSpecialKeys(keys);
 ```
+<<<<<<< HEAD
 Example 2 : To preview different apps running inside session, Ctrl+alt+tab can be sent.
 ```
 var keys = ["Control","Alt","Tab"];
 sessionObject.sendSpecialKeys(keys);	
 ```		
+=======
+
+Example 2 : To preview different apps running inside session, Ctrl+alt+tab can be sent.
+```
+var keys = ["Control","Alt","Tab"];
+sessionObject.sendSpecialKeys(keys);
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 				
 ### (inner) start(launchData)
 
@@ -249,7 +372,11 @@ Starts the session.
 ### Examples
 
 Example 1 : When ICA data is in JSON format                                
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 var icaObj = {
 	"ClientName":"HTML5-Receiver",
 	"Domain":"<domain_name>",
@@ -266,6 +393,7 @@ Example 2 : When ICA data is in INI format
 var launchData = {"type" :"ini",value :"<ica data in ini format>"};
 sessionObject.start(launchData);
 ```
+<<<<<<< HEAD
 #Events
 
 ##onConnection
@@ -280,6 +408,19 @@ object
 
 <table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>state</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Different connection states below : <br>"connecting" : Raised when connection starts before displaying connection dialog. <br>"connected" : Raised when connection is complete and when server and client starts exchanging data. <br>"sessionReady" : Raised when session is fully initialized, launched and ready for user interaction. <br></td></tr></tbody></table>
 
+=======
+Events
+
+onConnection
+
+To receive various states during the connection from client to server.
+Type:
+
+object
+### Properties:
+
+<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>state</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Different connection states below : <br>"connecting" : Raised when connection starts before displaying connection dialog. <br>"connected" : Raised when connection is complete and when server and client starts exchanging data. <br>"sessionReady" : Raised when session is fully initialized, launched and ready for user interaction. <br></td></tr></tbody></table>
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 ### Example
 
 Sample event object generated for onConnection event.	
@@ -290,6 +431,7 @@ Sample event object generated for onConnection event.
 	"data":{
 		"state" : "connecting" // Event is triggered 3 times with different states mentioned above.
 	}
+<<<<<<< HEAD
 }
 ```
 
@@ -315,12 +457,35 @@ Raised on occurrence of any error in Citrix Receiver.
 
 object
 
+=======
+}
+```
+onConnectionClosed
+
+Raised when the connection with the server is closed.
+### Example
+
+Sample event object generated for onConnectionClosed event.				
+```
+{	
+	"id":"<session id>",
+	"type" : "onConnectionClosed",
+}
+```
+onError
+
+Raised on occurrence of any error in Citrix Receiver.
+Type:
+
+object
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 ### Properties:
 
 <table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>id</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">String ID defined in &lt;locale_file&gt;.js. For example, en.js would be for English, ko.js for Korean etc., ID remains the same for all locales supported.</td></tr><tr> <td class="name"><code>message</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Localized error message for the key. Customer can provide custom string in the language file to get meaningful error in the context of the deployment.</td></tr></tbody></table>
 ### Example
 
 Sample event object generated for onError event.				
+<<<<<<< HEAD
 ```
 {	
 	"id":"<session id>",
@@ -333,6 +498,19 @@ Sample event object generated for onError event.
 ```				
 ##onToolbarBtnClick_btn_id
 
+=======
+```
+{	
+	"id":"<session id>",
+	"type" : "onError",
+	"data":{
+			"id":"<key_in_locale_file>" 
+			"message" : "<value_for_the_key_in_locale_file>"
+		}
+}							
+onToolbarBtnClick_btn_id
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 Raised when the custom toolbar button with id equal to btn_id is clicked.
 ### Example
 
@@ -344,6 +522,7 @@ Sample event object generated for onConnectionClosed event.
 	"data" : {
 			"id" : <btn_id>
 	}
+<<<<<<< HEAD
 }
 ```
 ##onURLRedirection
@@ -351,6 +530,14 @@ Sample event object generated for onConnectionClosed event.
 Raised when URL redirection is configured on server and when any URL is passed to the HTML5 engine to process. The message would contain the URL that is redirected to the client.
 
 ###Type:
+=======
+}
+```
+onURLRedirection
+
+Raised when URL redirection is configured on server and when any URL is passed to the HTML5 engine to process. The message would contain the URL that is redirected to the client.
+Type:
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
 
 object
 ### Properties:
@@ -366,5 +553,10 @@ Sample event object generated for onURLRedirection event.
 	"data":{
 		"url" : "<url_received_to_redirect>"
 	}
+<<<<<<< HEAD
 }	
 ```			
+=======
+}
+```
+>>>>>>> 3ef5781ce581803c2a824ce300796651b6ea0f98
