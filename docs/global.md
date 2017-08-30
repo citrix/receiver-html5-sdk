@@ -3,7 +3,7 @@
 
 ## Type Definitions
 
-### connectionParams
+### <a name="connectionparams"></a>connectionParams
 
 Configuration options to create the session.
 
@@ -78,7 +78,7 @@ Listener to handle the events.
   
 <table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>event.id</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Id of the session object.</td></tr><tr> <td class="name"><code>event.type</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Event Type triggered.</td></tr><tr> <td class="name"><code>event.data</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Data as appropriate to the event triggered.<br><br><a href="/Session#~event:onConnection">onConnection</a><br><a href="/Session#~event:onConnectionClosed">onConnectionClosed</a><br><a href="/Session#~event:onURLRedirection">onURLRedirection</a><br><a href="/Session#~event:onError">onError</a><br></td></tr></tbody></table>
 
-### onSessionCreated
+### <a name="onsessioncreated"></a>onSessionCreated
 
 Callback having the session object created.
 

@@ -19,8 +19,14 @@ citrix.receiver
 
 Creates a new session and returns session instance through callback. Use session instance to start the session, register and handle events and to disconnect the session.
 
-#### Parameters:
-<table class=params><thead><tr><th>Name<th>Type<th>Attributes<th class=last>Description<tbody><tr><td class=name><code>id</code><td class=type><span class=param-type>string</span><td class=attributes>&lt;optional><br><td class="last description">ID that is assigned when the session is created.<tr><td class=name><code>connectionParams</code><td class=type><span class=param-type><a href=/global#connectionParams>connectionParams</a></span><td class=attributes><td class="last description">Configuration options to create the session.<tr><td class=name><code>onSessionCreated</code><td class=type><span class=param-type><a href=/global#onSessionCreated>onSessionCreated</a></span><td class=attributes><td class="last description">Callback containing the session object created.<br><br>Signature sample below:<br>function &lt;function_name>(session_object){…}</table>
+#### Parameters
+
+| Name | Type | Attributes | Description |
+|---|---|---|---|
+| `id` | string | &lt;optional&gt; | ID that is assigned when the session is created |
+| `connectionParams`	 | [connectionParams](./global#connectionparams) | | Configuration options to create the session |
+| `onSessionCreated` | [onSessionCreated](./global#onsessioncreated) | | Callback containing the session object created. Signature sample below: <br> `function <function_name>(session_object){...}` | 
+
 #### Throws:
 Unable to create session object.
 
