@@ -363,7 +363,7 @@ Adds the custom buttons to the in-session toolbar.
             <td class="type">
 
 
-<span class="param-type"><a href="https://developer-docs.citrix.com/projects/receiver-html5-sdk/en/latest/global/#eventlistener/">eventListener</a></span>
+<span class="param-type"><a href="https://developer-docs.citrix.com/projects/receiver-html5-sdk/en/latest/global/#eventlistener">eventListener</a></span>
 
 
 
