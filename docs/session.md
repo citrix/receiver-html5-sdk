@@ -138,8 +138,8 @@ Registers the eventListener on the eventType.
 
 | Name | Type | Description |
 |---|---|---|
-| `eventType` | String | Type of the event for which the listener needs to be attached. Supported event types: <br> - onConnection <br> - onConnectionClosed <br> - onURLRedirection <br> - onError |
-| `eventListener` | eventListener | Listener to handle the event |
+| `eventType` | String | Type of the event for which the listener needs to be attached. Supported event types: <br> - [onConnection](./events#onconnection) <br> - [onConnectionClosed](./events#onconnectionclosed) <br> - [onURLRedirection](./events#onurlredirection) <br> - [onError](./events#onerror) |
+| `eventListener` | [eventListener](./global#eventlistener) | Listener to handle the event |
 
 #### Example 
 
@@ -363,7 +363,7 @@ Adds the custom buttons to the in-session toolbar.
             <td class="type">
 
 
-<span class="param-type"><a href="global.html#eventListener">eventListener</a></span>
+<span class="param-type"><a href="https://developer-docs.citrix.com/projects/receiver-html5-sdk/en/latest/global/#eventlistener/">eventListener</a></span>
 
 
 
@@ -489,8 +489,8 @@ Removes the eventListener on the eventType.
 
 | Name | Type | Description |
 |---|---|---|
-| `eventType` | String | Type of the event for which the listener needs to be removed. Supported event types: <br> - onConnection <br> - onConnectionClosed <br> - onURLRedirection <br> - onError |
-| `eventListener` | eventListener | Listener to handle the event |
+| `eventType` | String | Type of the event for which the listener needs to be removed. Supported event types: <br> - [onConnection](./events#onconnection) <br> - [onConnectionClosed](./events#onconnectionclosed) <br> - [onURLRedirection](./events#onurlredirection) <br> - [onError](./events#onerror) |
+| `eventListener` | [eventListener](./global#eventlistener) | Listener to handle the event |
 
 #### Example
 

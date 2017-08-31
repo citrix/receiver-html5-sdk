@@ -13,7 +13,9 @@ pages:
 - API Reference:
   - Class:
     - ReceiverError: ReceiverError.md
-  - Namespaces: 
+    - Session: session.md
+  - Namespaces:
     - Receiver: citrix-receiver.md
-  - Global: global.md
+- Events: events.md
+- Global: global.md
 - SDK Sample: sample.md

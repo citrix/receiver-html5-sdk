@@ -1,6 +1,6 @@
 # Events
 
-## onConnection
+## <a name= "onconnection">onConnection </a>
 
 To receive various states during the connection from client to server.
 
@@ -27,7 +27,7 @@ To receive various states during the connection from client to server.
 }
 ```
 
-## onConnectionClosed
+## <a name= "onconnectionclosed">onConnectionClosed</a>
 
 Raised when the connection with the server is closed.
 
@@ -40,7 +40,7 @@ Raised when the connection with the server is closed.
 }
 ```
 
-## onError
+## <a name ="onerror"> onError </a>
 
 Raised on occurrence of any error in Citrix Receiver.
 
@@ -86,7 +86,7 @@ Raised when the custom toolbar button with id equal to btn_id is clicked.
 }
 ```
 
-## onURLRedirection
+## <a name= "onurlredirection">onURLRedirection</a> 
 
 Raised when URL redirection is configured on server and when any URL is passed to the HTML5 engine to process. The message would contain the URL that is redirected to the client.
 

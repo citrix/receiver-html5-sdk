@@ -66,7 +66,7 @@ connectionParams full example
 }
 ```
   
-### eventListener<span class="signature">(event)</span>
+### <a name="eventlistener"> eventListener </a>
 
 Listener to handle the events.
 
