@@ -1,6 +1,8 @@
 site_name: Citrix HTML5 Receiver SDK
 site_description: Reference guide for Citrix HTML5 Receiver SDK
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com
+
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
@@ -66,3 +68,4 @@ nav:
 - Events: events.md
 - Global: global.md
 - SDK Sample: sample.md
+- Questions?: https://discussions.citrix.com/forum/1385-citrix-developer-exchange/
